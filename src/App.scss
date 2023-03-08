@@ -1,0 +1,15 @@
+App {
+    position: relative;
+    width: 1440px;
+    height: 1119px;
+    background: #ffffff;
+}
+@media screen and (max-width: 360px) {
+    App {
+        position: relative;
+        width: 360px;
+        height: 1187px;
+
+        background: #ffffff;
+    }
+}

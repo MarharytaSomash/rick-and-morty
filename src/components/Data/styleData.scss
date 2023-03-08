@@ -1,0 +1,139 @@
+.cards-character {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    max-width: 1020px;
+    left: 210px;
+    top: 419px;
+    background: #ffffff;
+
+    .cards-character-about {
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+            0px 2px 4px rgba(0, 0, 0, 0.14);
+        border-radius: 4px;
+        margin: 0px 13px 20px 0px;
+        height: 244px;
+        width: 240px;
+    }
+    img {
+        width: 240px;
+        height: 168px;
+        flex: none;
+        border-radius: 8px 8px 0px 0px;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 10px;
+        margin-top: 168px;
+        width: 240px;
+        height: 76px;
+        position: relative;
+
+        h2 {
+            width: 208px;
+            height: 30px;
+            flex-wrap: wrap;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.15px;
+            color: rgba(0, 0, 0, 0.87);
+            mix-blend-mode: normal;
+            position: absolute;
+            top: -160px;
+            left: 16px;
+        }
+        p {
+            width: 208px;
+            height: 21px;
+            flex-wrap: wrap;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            top: 31px;
+            letter-spacing: 0.25px;
+            color: rgba(0, 0, 0, 0.6);
+            mix-blend-mode: normal;
+            position: absolute;
+            top: -120px;
+            left: 16px;
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    .cards-character {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 24px;
+        top: 316px;
+        width: 312px;
+        padding: 0px;
+
+        .cards-character-about {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            width: 312px;
+            height: 308px;
+            background: #ffffff;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+                0px 2px 4px rgba(0, 0, 0, 0.14);
+            border-radius: 4px;
+        }
+        img {
+            width: 312px;
+            height: 232px;
+            position: static;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 12px 16px;
+            width: 312px;
+            height: 76px;
+
+            h2 {
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.15px;
+                width: 280px;
+                height: 30px;
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                color: rgba(0, 0, 0, 0.87);
+                mix-blend-mode: normal;
+            }
+            p {
+                width: 280px;
+                height: 21px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: 0.25px;
+                color: rgba(0, 0, 0, 0.6);
+                mix-blend-mode: normal;
+            }
+        }
+    }
+}

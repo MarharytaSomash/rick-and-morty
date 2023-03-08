@@ -11,12 +11,6 @@
     },
     "plugins": ["react"],
     "rules": {
-        "react/self-closing-comp": [
-            "warm",
-            {
-                "component": true,
-                "html": true
-            }
-        ]
+        "react/self-closing-comp": 0
     }
 }

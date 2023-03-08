@@ -1,0 +1,16 @@
+img {
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    left: 434px;
+    top: 86px;
+}
+@media screen and (max-width: 360px) {
+    img {
+        position: absolute;
+        width: 312px;
+        height: 104px;
+        left: 24px;
+        top: 92px;
+    }
+}
