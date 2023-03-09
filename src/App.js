@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Details from "./pages/Details";
 import NotFoundPage from "./pages/NotFoundPage";
 import { Routes, Route } from "react-router-dom";
+
 function App() {
     return (
         <>
