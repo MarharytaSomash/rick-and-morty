@@ -2,9 +2,10 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./styleData.scss";
 
-function GetData() {
+function GetData({ search }) {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
@@ -21,19 +22,25 @@ function GetData() {
 
     return (
         <div className="cards-character">
-            {characters.map((character) => (
-                <Link to={`/details/${character.id}`} key={character.id}>
-                    <section key={character.id} className="cards-character-about">
-                        <img src={character.image} alt={character.name} />
-                        <div>
-                            <h2>{character.name}</h2>
-                            <p>{character.species}</p>
-                        </div>
-                    </section>
-                </Link>
-            ))}
+            {characters
+                .filter((character) => character.name.toLowerCase().includes(search.toLowerCase()))
+                .map((character) => (
+                    <Link to={`/details/${character.id}`} key={character.id}>
+                        <section key={character.id} className="cards-character-about">
+                            <img src={character.image} alt={character.name} />
+                            <div>
+                                <h2>{character.name}</h2>
+                                <p>{character.species}</p>
+                            </div>
+                        </section>
+                    </Link>
+                ))}
         </div>
     );
 }
 
 export default GetData;
+
+GetData.propTypes = {
+    search: PropTypes.string.isRequired,
+};

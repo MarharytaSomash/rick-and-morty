@@ -1,15 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import useLocalStorage from "use-local-storage";
+import PropTypes from "prop-types";
+
 import "./styleForm.scss";
 
-function SearchForm() {
+function SearchForm({ onSearch }) {
     const [search, setSearch] = useState("");
     const [searchHistory, setSearchHistory] = useLocalStorage("searchHistory", []);
 
     const handleInputChange = (event) => {
         setSearch(event.target.value);
+        onSearch(event.target.value);
     };
+
     const handleSearch = (event) => {
         event.preventDefault();
         setSearchHistory([...searchHistory, search]);
@@ -23,6 +27,7 @@ function SearchForm() {
             <form onSubmit={handleSearch}>
                 <input
                     type="text"
+                    name="search"
                     placeholder="Filter by name ..."
                     value={search}
                     onChange={handleInputChange}
@@ -33,3 +38,7 @@ function SearchForm() {
 }
 
 export default SearchForm;
+
+SearchForm.propTypes = {
+    onSearch: PropTypes.func.isRequired,
+};

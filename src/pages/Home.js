@@ -2,13 +2,16 @@ import React from "react";
 import GetData from "../components/Data/GetData";
 import SearchForm from "../components/Form/SearchForm";
 import ShowLogo from "../components/Logo/ShowLogo";
+import { useState } from "react";
 
 function Home() {
+    const [search, setSearch] = useState("");
+
     return (
         <div>
             <ShowLogo />
-            <SearchForm />
-            <GetData />
+            <SearchForm onSearch={setSearch} />
+            <GetData search={search} />
         </div>
     );
 }
