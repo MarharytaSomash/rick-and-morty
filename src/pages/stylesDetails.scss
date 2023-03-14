@@ -43,7 +43,7 @@
         @include positionAbsolute;
         height: 300px;
         width: 300px;
-        left: 557px;
+        left: 580px;
         right: 583px;
         top: 76px;
         border: 5px solid #f2f2f7;
@@ -54,7 +54,7 @@
         @include positionAbsolute;
         width: 500px;
         height: 50px;
-        left: 550px;
+        left: 500px;
         top: 392px;
         @include fontFamily;
         font-style: normal;
@@ -135,7 +135,7 @@ h2 {
 @media screen and (max-width: 360px) {
     body {
         position: relative;
-        width: 360px;
+        max-width: 360px;
         height: 815px;
         background: #ffffff;
     }
@@ -157,14 +157,14 @@ h2 {
     .character-details {
         img {
             height: 148px;
-            width: 150px;
+            max-width: 150px;
             left: 109px;
             right: 109px;
             top: 124px;
         }
 
         h1 {
-            width: 318.93px;
+            max-width: 318.93px;
             height: 29.53px;
             left: 50px;
             top: 306px;
@@ -179,12 +179,12 @@ h2 {
     }
 
     .character-details-main-wrapper {
-        width: 312px;
+        max-width: 312px;
         left: 24px;
         top: 410px;
 
         .character-details-main {
-            width: 312px;
+            max-width: 312px;
             p {
                 line-height: 20px;
             }
