@@ -1,5 +1,8 @@
-.cards-character {
+@mixin flex {
     display: flex;
+}
+.cards-character {
+    @include flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -28,7 +31,7 @@
         top: 0%;
     }
     div {
-        display: flex;
+        @include flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 12px 16px;
@@ -70,32 +73,33 @@
             position: absolute;
             top: -117px;
             left: 16px;
+            
         }
     }
 }
 @media screen and (max-width: 360px) {
     body {
-        width: 360px;
+        max-width: 360px;
         height: 1187px;
         background: #ffffff;
     }
     .cards-character {
-        display: flex;
+        @include flex;
         flex-direction: row;
         align-items: flex-start;
         flex-wrap: wrap;
         position: absolute;
         left: 24px;
         top: 316px;
-        width: 312px;
+        max-width: 312px;
         height: 308px;
         padding: 0px;
 
         .cards-character-about {
-            display: flex;
+            @include flex;
             flex-direction: column;
             align-items: flex-start;
-            width: 312px;
+            max-width: 312px;
             height: 308px;
             background: #ffffff;
             box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
@@ -103,32 +107,33 @@
             border-radius: 4px;
         }
         img {
-            width: 312px;
+            max-width: 312px;
             height: 232px;
             position: static;
         }
         div {
-            display: flex;
+            @include flex;
             flex-direction: column;
             align-items: flex-start;
             padding: 12px 16px;
-            width: 312px;
+            max-width: 312px;
             height: 76px;
 
             h2 {
-                display: flex;
+                @include flex;
                 align-items: center;
                 letter-spacing: 0.15px;
-                width: 280px;
+                max-width: 280px;
                 height: 30px;
-                line-height: 30px;
+                line-height: 20px;
+                top:-158px;
                 mix-blend-mode: normal;
             }
             p {
-                width: 280px;
+                max-width: 280px;
                 line-height: 21px;
                 letter-spacing: 0.25px;
-                top: -130px;
+                top: -125px;
             }
         }
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
 import PropTypes from "prop-types";
 
@@ -9,6 +9,12 @@ function SearchForm({ onSearch }) {
     const [search, setSearch] = useState("");
     const [searchHistory, setSearchHistory] = useLocalStorage("searchHistory", []);
 
+    useEffect(() => {
+        if (searchHistory.length > 0) {
+            onSearch(searchHistory[searchHistory.length - 1]);
+        }
+    }, [onSearch, searchHistory]);
+    
     const handleInputChange = (event) => {
         setSearch(event.target.value);
         onSearch(event.target.value);
@@ -22,7 +28,7 @@ function SearchForm({ onSearch }) {
     return (
         <div className="search-form">
             <div className="search-icon">
-                <img src={process.env.PUBLIC_URL + "/img/vector.png"} alt="vector" />
+                <img src={process.env.PUBLIC_URL + "/img/search.png"} alt="vector" />
             </div>
             <form onSubmit={handleSearch}>
                 <input

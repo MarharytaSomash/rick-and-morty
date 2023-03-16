@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./styleData.scss";
 
-function GetData({ search }) {
+function Data({ search }) {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
@@ -39,8 +39,8 @@ function GetData({ search }) {
     );
 }
 
-export default GetData;
+export default Data;
 
-GetData.propTypes = {
+Data.propTypes = {
     search: PropTypes.string.isRequired,
 };

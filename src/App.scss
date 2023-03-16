@@ -1,15 +1,17 @@
-App {
-    position: relative;
-    width: 1440px;
-    height: 1119px;
-    background: #ffffff;
+body {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 1440px;
+        height: 1119px;
+        background: #ffffff;
+        min-height: 100vh; 
+
 }
 @media screen and (max-width: 360px) {
-    App {
-        position: relative;
-        width: 360px;
-        height: 1187px;
-
+    body {
+        max-width: 360px;
+        height: 815px;
         background: #ffffff;
     }
 }
